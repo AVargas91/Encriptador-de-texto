@@ -1,1 +1,1 @@
-Esta es el proyecto final para obtener la especializacion de Oracle
+Este es el proyecto final para obtener la especializacion de Oracle
