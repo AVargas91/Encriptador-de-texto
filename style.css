@@ -167,6 +167,7 @@ header{
     background: none;
 	width: 100%;
 	min-width: 100px;
+    margin-top: auto;
 }
 
 .boton__ocultar{
@@ -202,6 +203,7 @@ header{
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     align-items: center;
+    padding: 1rem;
 }
 
 .imagen{
@@ -253,19 +255,137 @@ p.mensaje__dos{
 
 @media (max-width: 768px) {
     .contenedor {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+        margin: auto;
     }
+
     .contenedor__entrada {
         width: 100%;
+        height: auto; 
     }
+
     .titulo {
         width: 100%;
-        margin: 0;
+        max-height: 240px;
+        max-width: 688px;
+        font-size: 32px;
+        left: 40px;
+        top: 0;
+        position: relative;
     }
+
+    .terminos {
+        left: 40px;;
+    }
+
+    .aviso {
+        font-size: 12px;
+    }
+
     .botones {
-        flex-direction: column;
-    }
-    .boton__encriptar, .boton__desencriptar, .boton__copiar {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center; 
+        gap: 16px; 
         width: 100%;
+        left: 40px;
+    }
+
+    .boton__encriptar, .boton__desencriptar, .boton__copiar {
+        width: 100%; 
+        max-width: none;
+    }
+
+   
+    .boton__encriptar, .boton__desencriptar{
+        max-width: 332px;
+        min-width: 160px;
+        height: 67px;
+        font-size: 16px;
+        border-radius: 24px;
+        border: none;
+        font-weight: 400;
+    }
+
+    .contenedor__salida { 
+        width: 688px;
+        padding: 1rem;
+        position: relative;
+        order: 1; 
+        height: auto;
+        top: 120%;
+        left: 40px;
+        border-radius: 32px;
+    }
+
+
+    .imagen {
+        display: none;
+    }
+
+    h2.mensaje {
+        font-size: 18px;
     }
 }
+
+@media (max-width: 440px) {
+    
+    .botones {
+        flex-direction: column; 
+        gap: 16px; 
+        display: flex;
+        justify-content: center; 
+        width: 100%;
+        left: 16px;
+        align-items: center;
+    }
+
+    .boton__encriptar, .boton__desencriptar, .boton__copiar {
+        width: 100%; 
+        max-width: none;
+    }
+
+   
+    .boton__encriptar, .boton__desencriptar{
+        max-width: 390px;
+        min-width: 160px;
+        height: 67px;
+        font-size: 16px;
+        border-radius: 24px;
+        border: none;
+        font-weight: 400;
+    }
+
+    .titulo {
+        max-width: 343px;
+        max-height: 48px;
+        font-size: 32px;
+        width: 100%;
+        left: 16px;
+        top: 0;
+        position: relative;
+    }
+
+    .contenedor__salida { 
+        max-width: 327px;
+        padding: 1rem;
+        position: relative;
+        order: 1; 
+        max-width: 186px;
+        top: 265%;
+        left: 24px;
+        border-radius: 32px;
+    }
+    
+    .aviso {
+        font-size: 10px;
+    }
+
+    h2.mensaje {
+        font-size: 16px;
+    }
+
+
+}
+
